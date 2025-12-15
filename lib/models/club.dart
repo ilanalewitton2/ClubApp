@@ -1,19 +1,31 @@
 class Club {
+  final int id;
   final String name;
-  final String imageUrl;
-  final String head1;
-  final String head2;
-  final String room;
-  final String meetingTime;
   final String description;
+  final String category;
+  final String time;
+  final String week;
+  final String room;
 
   Club({
-    this.name = "Club Name Placeholder",
-    this.imageUrl = "https://placehold.co/600x400",
-    this.head1 = "Head 1 Placeholder",
-    this.head2 = "Head 2 Placeholder",
-    this.room = "Room Placeholder",
-    this.meetingTime = "Meeting Time Placeholder",
-    this.description = "Club description placeholder.",
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.category,
+    required this.time,
+    required this.week,
+    required this.room,
   });
+
+  factory Club.fromJson(Map<String, dynamic> json) {
+    return Club(
+      id: json['id'],
+      name: json['name'],
+      description: json['description'],
+      category: json['category'],
+      time: json['time'],
+      week: json['week'],
+      room: json['room'],
+    );
+  }
 }
