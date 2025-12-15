@@ -1,3 +1,5 @@
+import 'package:supabase_flutter/supabase_flutter.dart';
+final supabase = Supabase.instance.client;
 import 'package:flutter/material.dart';
 import '../models/club.dart';
 
