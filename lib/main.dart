@@ -23,7 +23,12 @@ class PSINTApp extends StatelessWidget {
     return MaterialApp(
       title: 'PSINT',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: theme: ThemeData(
+  primaryColor: const Color(0xFF7A0D1E),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: Color(0xFF7A0D1E),
+  ),
+),
       home: const DiscoveryPage(),
     );
   }
