@@ -6,8 +6,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Supabase.initialize(
-    url: 'https://YOUR_PROJECT_ID.supabase.co',
-    anonKey: 'YOUR_PUBLIC_ANON_KEY',
+    url: 'https://vxcsgjtpfraeisalahpl.supabase.co',
+    anonKey: 'YOUR_ANON_PUBLIC_KEY',
   );
 
   runApp(const PSINTApp());
@@ -21,7 +21,12 @@ class PSINTApp extends StatelessWidget {
     return MaterialApp(
       title: 'PSINT',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(
+        primaryColor: const Color(0xFF7A0D1E),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF7A0D1E),
+        ),
+      ),
       home: const DiscoveryPage(),
     );
   }
