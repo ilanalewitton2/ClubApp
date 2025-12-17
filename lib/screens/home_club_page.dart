@@ -37,6 +37,20 @@ class HomeClubPage extends StatelessWidget {
               style: const TextStyle(fontSize: 16),
             ),
           ),
+
+          const SizedBox(height: 24),
+
+ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => ClubContactsPage(clubId: club.id),
+      ),
+    );
+  },
+  child: const Text("Contacts"),
+),
         ],
       ),
     );
