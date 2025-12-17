@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'screens/discovery_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: 'https://YOUR_PROJECT_ID.supabase.co',
+    anonKey: 'YOUR_PUBLIC_ANON_KEY',
+  );
+
   runApp(const PSINTApp());
 }
 
